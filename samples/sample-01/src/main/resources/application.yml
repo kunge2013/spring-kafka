@@ -4,5 +4,6 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       bootstrap-servers: localhost:9101
     consumer:
+      max-poll-records: 1000
       bootstrap-servers: localhost:9101
     bootstrap-servers: localhost:9101
