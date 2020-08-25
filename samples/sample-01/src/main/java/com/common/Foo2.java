@@ -23,6 +23,7 @@ package com.common;
  */
 public class Foo2 {
 
+
 	private String foo;
 
 	public Foo2() {
