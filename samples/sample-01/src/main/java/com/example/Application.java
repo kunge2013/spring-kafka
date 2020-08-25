@@ -71,10 +71,16 @@ public class Application {
 	@KafkaListener(id = "fooGroup", topics = "topic1")
 	public void listen(Foo2 foo) {
 		logger.info("Received: " + foo);
+		try {
+			Thread.sleep(1000 * 60);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		if (foo.getFoo().startsWith("fail")) {
 			throw new RuntimeException("failed");
 		}
 	}
+
 
 	@KafkaListener(id = "dltGroup", topics = "topic1.DLT")
 	public void dltListen(String in) {
