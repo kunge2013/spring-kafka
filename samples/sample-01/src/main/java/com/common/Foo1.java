@@ -25,6 +25,7 @@ public class Foo1 {
 
 	private String foo;
 
+
 	public Foo1() {
 	}
 
